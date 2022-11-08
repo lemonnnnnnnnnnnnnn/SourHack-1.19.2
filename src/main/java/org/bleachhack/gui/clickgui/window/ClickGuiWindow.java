@@ -43,15 +43,15 @@ public abstract class ClickGuiWindow extends Window {
 
 	protected void drawBackground(MatrixStack matrices, int mouseX, int mouseY, TextRenderer textRend) {
 		/* background */
-		DrawableHelper.fill(matrices, x1, y1 + 1, x1 + 1, y2 - 1, 0xff6060b0);
-		horizontalGradient(matrices, x1 + 1, y1, x2 - 1, y1 + 1, 0xff6060b0, 0xff8070b0);
-		DrawableHelper.fill(matrices, x2 - 1, y1 + 1, x2, y2 - 1, 0xff8070b0);
-		horizontalGradient(matrices, x1 + 1, y2 - 1, x2 - 1, y2, 0xff6060b0, 0xff8070b0);
+		DrawableHelper.fill(matrices, x1, y1 + 1, x1 + 1, y2 - 1, 0xffbf30);
+		horizontalGradient(matrices, x1 + 1, y1, x2 - 1, y1 + 1, 0xffbf30, 0xffe599);
+		DrawableHelper.fill(matrices, x2 - 1, y1 + 1, x2, y2 - 1, 0xffe599);
+		horizontalGradient(matrices, x1 + 1, y2 - 1, x2 - 1, y2, 0xffbf30, 0xffe599);
 
 		DrawableHelper.fill(matrices, x1 + 1, y1 + 12, x2 - 1, y2 - 1, 0x90606090);
 
 		/* title bar */
-		horizontalGradient(matrices, x1 + 1, y1 + 1, x2 - 1, y1 + 12, 0xff6060b0, 0xff8070b0);
+		horizontalGradient(matrices, x1 + 1, y1 + 1, x2 - 1, y1 + 12, 0xffbf30, 0xffe599);
 
 		/* +/- text */
 		textRend.draw(matrices, hiding ? "+" : "_", x2 - 10, y1 + (hiding ? 4 : 2), 0x000000);
