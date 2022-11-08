@@ -16,8 +16,6 @@ import org.bleachhack.event.events.EventPacket;
 import org.bleachhack.eventbus.BleachSubscribe;
 import org.bleachhack.module.Module;
 import org.bleachhack.module.ModuleCategory;
-import org.bleachhack.setting.module.SettingColor;
-import org.bleachhack.setting.module.SettingToggle;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -27,10 +25,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 // modified by https://github.com/lasnikprogram
 // modified by https://github.com/BleachDrinker420
 
-public class AntiHumanBypass extends Module {
+public class DemoBypass extends Module {
 
-    public AntiHumanBypass() {
-        super("AntiHumanBypass", KEY_UNBOUND, ModuleCategory.OVERFLOW, "Bypasses the AntiHuman plugin on the LO Server.");
+    public DemoBypass() {
+        super("DemoBypass", KEY_UNBOUND, ModuleCategory.OVERFLOW, "Drops Demo Packets.");
     }
     @BleachSubscribe
     public void onSendPacket(EventPacket.Send event) {
@@ -39,7 +37,7 @@ public class AntiHumanBypass extends Module {
             class ClientConnectionMixin {
                 @Inject(at = @At("TAIL"), method = "send(Lnet/minecraft/network/Packet;Lnet/minecraft/network/PacketCallbacks;)V", cancellable = true)
                 public void send(Packet<?> packet, PacketCallbacks callbacks, CallbackInfo ci) {
-                    
+                    ci.cancel();
                 }
             }
         }
