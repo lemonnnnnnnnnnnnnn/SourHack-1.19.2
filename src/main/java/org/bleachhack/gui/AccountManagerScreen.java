@@ -152,7 +152,7 @@ public class AccountManagerScreen extends WindowScreen {
 		textRenderer.drawWithShadow(matrices, "Fabric: " + FabricLoader.getInstance().getModContainer("fabricloader").get().getMetadata().getVersion().getFriendlyString(),
 				4, height - 30, -1);
 		textRenderer.drawWithShadow(matrices, "Minecraft: " + SharedConstants.getGameVersion().getName(), 4, height - 20, -1);
-		textRenderer.drawWithShadow(matrices, "Logged in as: \u00a7a" + client.getSession().getUsername(), 4, height - 10, -1);
+		textRenderer.drawWithShadow(matrices, "You are: \u00a7a" + client.getSession().getUsername(), 4, height - 10, -1);
 
 		hovered = -1;
 		super.render(matrices, mouseX, mouseY, delta);

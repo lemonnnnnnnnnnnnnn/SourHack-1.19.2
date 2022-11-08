@@ -107,7 +107,7 @@ public class BleachTitleScreen extends WindowScreen {
 					MutableText bhText = Text.literal("");
 
 					int i = 0;
-					for (char c: "BleachHack".toCharArray()) {
+					for (char c: "SourHack".toCharArray()) {
 						int fi = i++;
 						bhText.append(
 								Text.literal(String.valueOf(c)).styled(s -> s.withColor(TextColor.fromRgb(UI.getRainbowFromSettings(fi)))));
@@ -152,7 +152,7 @@ public class BleachTitleScreen extends WindowScreen {
 		textRenderer.drawWithShadow(matrices, "Fabric: " + FabricLoader.getInstance().getModContainer("fabricloader").get().getMetadata().getVersion().getFriendlyString(),
 				4, height - 30, -1);
 		textRenderer.drawWithShadow(matrices, "Minecraft: " + SharedConstants.getGameVersion().getName(), 4, height - 20, -1);
-		textRenderer.drawWithShadow(matrices, "Logged in as: \u00a7a" + client.getSession().getUsername(), 4, height - 10, -1);
+		textRenderer.drawWithShadow(matrices, "You are: \u00a7a" + client.getSession().getUsername(), 4, height - 10, -1);
 
 		super.render(matrices, mouseX, mouseY, delta);
 
