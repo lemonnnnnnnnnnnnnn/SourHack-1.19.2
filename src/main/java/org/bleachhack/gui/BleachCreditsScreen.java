@@ -56,7 +56,7 @@ public class BleachCreditsScreen extends WindowScreen {
 	}
 
 	public BleachCreditsScreen() {
-		super(Text.literal("BleachHack Credits"));
+		super(Text.literal("Sourhack Credits"));
 	}
 
 	public void init() {
@@ -75,7 +75,7 @@ public class BleachCreditsScreen extends WindowScreen {
 
 		getWindow(0).addWidget(new WindowTextWidget("- Main Developer -", true, WindowTextWidget.TextAlign.MIDDLE, w / 2, 65, 0xe0e0e0));
 		getWindow(0).addWidget(new WindowTextWidget(
-				Text.literal("Bleach").styled(s -> s.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.literal("\u00a77https://github.com/BleachDrinker420\n\n\u00a7eMain Developer!")))),
+				Text.literal("Lemon").styled(s -> s.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Text.literal("\u00a77https://github.com/lemonnnnnnnnnnnnnn\n\n\u00a7eMain Developer!")))),
 				true, WindowTextWidget.TextAlign.MIDDLE, w / 2, 80, 0x51eff5));
 
 		getWindow(0).addWidget(new WindowTextWidget("- Contributors -", true, WindowTextWidget.TextAlign.MIDDLE, w / 2, 100, 0xe0e0e0));
